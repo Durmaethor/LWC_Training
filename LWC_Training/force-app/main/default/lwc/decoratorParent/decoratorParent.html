@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Contact List" icon-name="standard:contact">
+        <lightning-button name="Open All" label="Open All Records" onclick={openAllRecords}></lightning-button>
+        <div class="slds-grid slds-wrap" >
+            <div class="slds-size_1-of-1 slds-p-around_medium">
+                <template for:each={contacts} for:item="contact" for:index="i">
+                    <div key={contact.i}>
+                        <c-decorator-child contact={contact}></c-decorator-child>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

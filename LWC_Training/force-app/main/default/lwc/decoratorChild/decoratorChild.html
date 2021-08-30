@@ -1,0 +1,13 @@
+<template>
+    <template if:true={contact}>
+        <lightning-card title={contact.Name} icon-name="standard:lightning_component">
+            <div class="slds-grid slds-wrap">
+                <div class="slds-size_1-of-1 slds-p-around_medium">
+                    <p>Email: {contact.Email}</p>
+                    <p>Mobile: {contact.Mobile}</p>
+                    <lightning-button name="view contact" label="view" onclick={navigateToPage}></lightning-button>
+                </div>
+            </div>
+        </lightning-card>
+    </template>
+</template>
